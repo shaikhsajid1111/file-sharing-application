@@ -8,9 +8,7 @@ const downloadFile = async (req,res,next) =>{
     });
 
     if(!file){
-        return res.render('download',{
-            error : 'Link have been expired'
-        })
+        return res.status(404).json({error : "File Not Available!"})
     }
 
     const response = await file.save();
