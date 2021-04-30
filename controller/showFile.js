@@ -6,17 +6,16 @@ const show = async (req,res,next) =>{
 
 
         if(!file){
-            return res.render('download',{error : "Link have been expired."});
+            return res.json({error : "Link have been expired."});
         }
 
-        return res.render("download",{uuid:file.uuid,
+        return res.status(200).json({uuid:file.uuid,
         fileName : file.filename,
         fileSize : file.size,
         downloadLink : `${process.env.APP_BASE_URL}/files/download/${file.uuid}`
-        
         })
     }catch(err){
-        return res.render('download',{error : err.message})
+        return res.json({error : err.message})
     }
 
 
