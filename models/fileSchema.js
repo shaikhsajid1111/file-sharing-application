@@ -1,37 +1,42 @@
-const mongoose = require('mongoose')
+const mongoose = require("mongoose");
 const schema = mongoose.Schema;
 
-
-const fileSchema = new schema({
-    filename : {
-        type : String,
-        required : true
+//file schema for storing in database
+const fileSchema = new schema(
+  {
+    filename: {
+      //to store file's name, type is string and require to store
+      type: String,
+      required: true,
     },
-    path : {
-        type : String,
-        required: true,
+    path: {
+      //to store file's path in database, type is string and is require to store
+      type: String,
+      required: true,
     },
-    size : {
-        type : Number,
-        required : true
+    size: {
+      //to store file's name, type is Integer and require to store
+      type: Number,
+      required: true,
     },
-    uuid : {
-        type : String,
-        required:true
+    uuid: {
+      //Unique ID given to file for later retrieval
+      type: String,
+      required: true,
     },
-    sender : {
-        type : String,
-        required: false,
-
+    sender: {
+      type: String,
+      required: false,
     },
-    receiver : {
-        type : String,
-        required : false
-    }
-},{
-    timestamps : true
-});
+    receiver: {
+      type: String,
+      required: false,
+    },
+  },
+  {
+    //stores when file was stored
+    timestamps: true,
+  }
+);
 
-
-
-module.exports = mongoose.model("FILE",fileSchema);
+module.exports = mongoose.model("FILE", fileSchema);
