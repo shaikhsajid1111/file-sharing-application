@@ -5,7 +5,7 @@ bookish-parakeet is a file-sharing API
 <hr>
 <h2>Installation: </h2>
  <li>Install dependecies with <code>npm install</code> or <code>yarn install</code> </li>
-<li>Open terminal nn project directory and run command <code> npm start </code> or <code> nodemon </code> to start the project.
+<li>Open terminal in project directory and run command <code> npm start </code> or <code> nodemon </code> to start the project.
 <hr>
 <br>
 <h2>How to use?</h2>
