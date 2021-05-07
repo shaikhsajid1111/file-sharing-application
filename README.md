@@ -6,7 +6,15 @@ bookish-parakeet is a file-sharing API
 <h2>Installation: </h2>
  <li>Install dependecies with <code>npm install</code> or <code>yarn install</code> </li>
 <li>Open terminal in project directory and run command <code> npm start </code> or <code> nodemon </code> to start the project.
+<li> create <code>.env</code> on project directory and inside the same file insert,
+<code> 
+PORT=3500
+APP_BASE_URL=http://localhost:3500
+MONGO_URL=mongo
+_url</li>
+</code>
 <hr>
+
 <br>
 <h2>How to use?</h2>
 <table>
