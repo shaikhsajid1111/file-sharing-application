@@ -10,11 +10,12 @@ Filereal is an application that lets you share up to 10 files per 30 minutes ano
  <li>Install dependecies using command <code>npm install</code> or <code>yarn install</code> </li>
 <li> create <code>.env</code> file on project directory and inside the same file write these variables,
 <br/>
-<code>
-PORT=3500<br/>
-APP_BASE_URL=http://localhost:3500<br/>
-MONGO_URL=mongodb://[username:password@]host1[:port1][,...hostN[:portN]][/[defaultauthdb][?options]]<br/>
-</code>
+
+<pre>
+PORT=3500
+APP_BASE_URL=http://localhost:3500
+MONGO_URL=mongodb://[username:password@]host1[:port1][,...hostN[:portN]][/[defaultauthdb][?options]]
+</pre>
 <li>At the same level of directory, start the server using the command <code>npm start</code> or <code>nodemon</code>. </li>
 <br>
 <h3>Client setup:</h3>
@@ -23,10 +24,9 @@ MONGO_URL=mongodb://[username:password@]host1[:port1][,...hostN[:portN]][/[defau
  <li>Install dependecies using command <code>npm install</code> or <code>yarn install</code>.</li>
 <li> create
 <code>.env</code> file in <code>client/</code> directory and inside the same file write these variables,
-<code>
-</br>
-REACT_APP_API_BASE_URL=http://localhost:3500 <br/>
-</code>
+<pre>
+REACT_APP_API_BASE_URL=http://localhost:3500 
+</pre>
 <li>Inside the the same <code>client/</code> directory, start the client application with the command <code>npm start</code> and open <a href="http://localhost:3000"> http://localhost:3000 </a> to view it in your browser.</li>
 
 <hr>
