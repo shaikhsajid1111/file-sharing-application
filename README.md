@@ -30,7 +30,7 @@ REACT_APP_API_BASE_URL=http://localhost:3500 </br>
 <li>Start the client application with the command <code>npm start</code></li>
 <hr>
 
-<h2>Tech:</h2>
+<h2>Tech</h2>
 <li>Express</li>
 <li>Mongoose</li>
 <li>Multer</li>
@@ -38,11 +38,9 @@ REACT_APP_API_BASE_URL=http://localhost:3500 </br>
 <li>React</li>
 <li>Bootstrap</li>
 
-
-<br>
 <hr>
 
-<br>
+
 <h2>Screenshot</h2>
 <img src="https://i.imgur.com/Klu5r7O.jpg" />
 
