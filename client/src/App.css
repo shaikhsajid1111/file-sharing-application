@@ -1,0 +1,35 @@
+body{
+  background-image: url('./components/images/Yoshino\ and\ Kurumi\ -\ Date\ A\ Live\ Minimalist.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-family: 'Ubuntu Mono', monospace !important;
+  height: 100%;
+  background-attachment: fixed;
+
+}
+
+hr.border-line {
+    overflow: visible; /* For IE */
+    padding: 0;
+    border: none;
+    border-top: medium double #333;
+    color: #333;
+    text-align: center;
+}
+hr.border-line:after {
+    content: "§";
+    display: inline-block;
+    position: relative;
+    top: -0.7em;
+    font-size: 1.5em;
+    padding: 0 0.25em;
+    background: white;
+}
+.result-table{
+  color: white !important;
+}
+
+/*
+font-family: 'Ubuntu Mono', monospace;
+*/
