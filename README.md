@@ -11,9 +11,9 @@ Filereal is an application that lets you share up to 10 files per 30 minutes ano
 <li> create <code>.env</code> file on project directory and inside the same file write these variables,
 <br/>
 <code>
-PORT=3500 <br/>
-APP_BASE_URL=http://localhost:3500 <br/>
-MONGO_URL=mongodb://[username:password@]host1[:port1][,...hostN[:portN]][/[defaultauthdb][?options]] <br/>
+PORT=3500<br/>
+APP_BASE_URL=http://localhost:3500<br/>
+MONGO_URL=mongodb://[username:password@]host1[:port1][,...hostN[:portN]][/[defaultauthdb][?options]]<br/>
 </code>
 <li>At the same level of directory, start the server using the command <code>npm start</code> or <code>nodemon</code>. </li>
 <br>
