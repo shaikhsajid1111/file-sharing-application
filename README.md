@@ -1,62 +1,33 @@
-<h1>Bookish parakeet</h1>
-bookish-parakeet is a file-sharing API
+<h1>Filereal</h1>
+Filereal is an application that lets you share up to 10 files per 30 minutes anonymously.
 
 <br>
 <hr>
 <h2>Installation: </h2>
- <li>Install dependecies with <code>npm install</code> or <code>yarn install</code> </li>
-<li>Open terminal in project directory and run command <code> npm start </code> or <code> nodemon </code> to start the project.
-<li> create <code>.env</code> on project directory and inside the same file insert,
+<h3>Server setup: </h3>
+<li>Open terminal in project directory
+</li>
+ <li>Install dependecies using command <code>npm install</code> or <code>yarn install</code> </li>
+<li> create <code>.env</code> file on project directory and inside the same file insert,
 <br>
-<code> 
+<code>
 PORT=3500 </br>
 APP_BASE_URL=http://localhost:3500 </br>
 MONGO_URL=mongodb://[username:password@]host1[:port1][,...hostN[:portN]][/[defaultauthdb][?options]] </br>
 </code>
-</li>
-
-<hr>
-
+<li>At the same level of directory, start the server using the command <code>npm start</code> or <code>nodemon</code>. </li>
 <br>
-<h2>How to use?</h2>
-<table>
-<tr>
-<td>
-Uploading file
-</td>
-<td>
-Make POST request to http://localhost:3500/uploadfile with a file with parameter name as "file"
-</td>
-<td>
-Response will be JSON containing the URL for the file
-</td>
-</tr>
-<tr>
-<td>
-Retrieving the file
-</td>
-<td>
-Make a GET request to the file URL that has been given after POST request
-</td>
-<td>
-Response will be in JSON format containing the download link and when that file will expire.
-</td>
-</tr>
-<tr>
-<td>
-Downloading the file
-</td>
-<td>
-Make a GET request to the URL that has been given after retrieving the file information.
-</td>
-<td>
-Downloads the file.
-</td>
-</tr>
-</table>
+<h3>Client setup:</h3>
 
-
-<br>
+<li>Now, to run the client, open terminal <code>client/</code> directory in terminal.</li>
+ <li>Install dependecies using command <code>npm install</code> or <code>yarn install</code>.</li>
+<li> create <code>.env</code> file on project directory and inside the same file insert,
+<code>
+</br>
+EXPRESS_PORT=3500 <br>
+REACT_APP_API_BASE_URL=http://localhost:3500 </br>
+</code>
+<li>Start the client application with the command <code>npm start</code></li>
 <hr>
 
 <h2>Tech:</h2>
@@ -64,9 +35,23 @@ Downloads the file.
 <li>Mongoose</li>
 <li>Multer</li>
 <li>UUID</li>
+<li>React</li>
+<li>Bootstrap</li>
+
+
 <br>
 <hr>
 
+<br>
+<h2>Screenshot</h2>
+<img src="https://i.imgur.com/Klu5r7O.jpg" />
+
+<br>
+<hr>
+<h2>Credits</h2>
+<li><a href="https://www.deviantart.com/yuki-neh/art/Yoshino-and-Kurumi-Date-A-Live-Minimalist-719372219"> Background Image </a> used in this application belongs to <a href="https://www.deviantart.com/yuki-neh">Yuki-Neh</a> </li>
+<li>Favicon used in this application belongs to <a href="https://fontawesome.com/">Font-Awesome</a></li>
+<hr>
 <h2>LICENSE</h2>
 MIT
 
