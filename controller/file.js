@@ -4,6 +4,7 @@ const FILE = require("../models/fileSchema");
 
 const { v4: uuidv4 } = require("uuid");
 
+
 let storage = multer.diskStorage({
   destination: (req, file, cb) => cb(null, "uploads/"), //upload to uploads/ folder
   filename: (req, file, cb) => {
@@ -26,18 +27,22 @@ const uploadFile = (req, res, next) => {
     if (err) {
       return res.status(500).send({ error: err.message });
     }
-
+    if (req.body['secretKey'] === undefined) {
+      return res.status(500).send({ error: "Secret Key is Required!" });
+    }
     const file = new FILE({
       filename: req.file.filename,
       uuid: uuidv4(),
       path: req.file.path,
       size: req.file.size,
+      secretKey: req.body['secretKey']
     }); //store file's data in database, new Instance of FILE schema
 
     const response = await file.save(); //save the data to database
 
     res.json({
-      fileURL: `${process.env.APP_BASE_URL}/files/${response.uuid}`,
+      uniqueId : response.uuid,
+      fileURL: `${process.env.APP_BASE_URL}/api/files/${response.uuid}`,
     });
   });
 };

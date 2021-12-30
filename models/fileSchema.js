@@ -24,14 +24,11 @@ const fileSchema = new schema(
       type: String,
       required: true,
     },
-    sender: {
+    secretKey: {
+      //secret key that holds the password in case if the user wants to delete the file, they need to provide the key
       type: String,
-      required: false,
-    },
-    receiver: {
-      type: String,
-      required: false,
-    },
+      require: true
+    }
   },
   {
     //stores when file was stored
