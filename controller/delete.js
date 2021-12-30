@@ -1,11 +1,8 @@
-const connectDatabase = require("./database/connection");
-
-const FILE = require("./models/fileSchema");
+const FILE = require("../models/fileSchema");
 const fs = require("fs");
 
-connectDatabase();
 
-deleteFiles = async () => {
+const deleteFiles = async () => {
   const files = await FILE.find({
     createdAt: {
       $lt: new Date(Date.now() - 24 * 60 * 60 * 1000),
@@ -25,7 +22,6 @@ deleteFiles = async () => {
     }
   }
 
-  console.log("Job Done!");
 };
 
-deleteFiles().then(process.exit);
+exports.deleteFiles = deleteFiles;
